@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-container grid-list-md>
+                    <v-row no-gutters class="justify-center align-center">
+                        <v-col>
+                            <div class="title font-weight-medium"> How to use cards in a landingpage</div>
+                        </v-col>
+                    </v-row>
+                </v-container>
+                <!-- this is the container you can set the padding to   -->
+
+                <!-- code starts here -->
+                <v-container grid-list-md class="pl-10 pr-10 pb-10 blue">
+                    <div class="title font-weight-medium">Style 1</div>
+                    <v-row class="red">
+                        <!-- using the row with CSS helpers-->
+                        <v-col class="d-flex row justify-center">
+                            <v-card v-for="n in 3" :key="n" width="200" href="./first.html" class="ma-2">
+                                <v-img class="white--text align-end" height="200px"
+                                    src="https://images.unsplash.com/photo-1541950913-18c3cf4a7a1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+                                </v-img>
+                                <v-card-title primary-title>
+                                    Card
+                                </v-card-title>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+
+
+                <!-- How the first style can be used -->
+
+                <v-container grid-list-md class="pl-10 pr-10 pb-10 mt-5">
+                    <div class="title font-weight-medium">First example 1</div>
+                    <v-row no-gutters>
+                        <!-- using the row with CSS helpers-->
+                        <v-col class="d-flex row justify-center">
+                                <v-card v-for="user in users" :key='id' flat width="200" class="ml-6 mr-6 mt-4 mb-4">
+                                    <v-img class="white--text align-center imageStyle" height="200px"
+                                        :src="user.img">
+                                    </v-img>
+                                    <v-content class="d-inline-flex row text-center align-center">
+                                        <v-card-title primary-title class="justify-center">
+                                            <span>{{ user.name }}</span>
+                                            <span class="body-1"> {{ user.job }} </span>
+                                        </v-card-title>
+                                    </v-content>
+                                   
+                                </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+
+
+                <v-container grid-list-md class="pl-10 pr-10 pb-10 mt-5">
+                    <div class="title font-weight-medium">First example 1</div>
+                    <v-row no-gutters>
+                        <!-- using the row with CSS helpers-->
+                        <v-col class="d-flex row justify-center">
+                                <v-card v-for="user in users" :key='id' flat width="200" class="ml-6 mr-6 mt-4 mb-4">
+                                    <v-img class="white--text align-center imageStyle" height="200px"
+                                        :src="user.img">
+                                    </v-img>
+                                    <v-content class="d-inline-flex row text-center align-center">
+                                        <v-card-title primary-title class="justify-center">
+                                            <span>{{ user.name }}</span>
+                                            <span class="body-1"> {{ user.job }} </span>
+                                        </v-card-title>
+                                    </v-content>
+                                   
+                                </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="../js/main.js">
+
+    </script>
+</body>
+
+
+<style>
+    .imageStyle {
+        border-radius: 100px !important;
+    }
+</style>
+
+</html>

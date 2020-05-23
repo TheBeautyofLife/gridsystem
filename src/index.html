@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>  
+      <v-img height="300" src="https://miro.medium.com/max/2000/1*2igfKN_sKkfipSNz6S4uXQ.jpeg">
+          <img />
+      </v-img>
+      <v-content>
+        <v-container grid-list-sm>
+          <v-col class="justify-center">
+            <div class="headline font-width-bold">Tools</div>
+              <v-col class="d-flex flex-wrap">
+                <v-icon :size="iconSize" color="orange">mdi-language-html5</v-icon>
+                <v-icon :size="iconSize" color="green lighten-2">mdi-vuejs</v-icon>
+                <v-icon :size="iconSize">mdi-vuetify</v-icon>
+                <v-icon :size="iconSize">mdi-language-css3</v-icon>
+              </v-col>
+          </v-col>
+        <v-row class="pa-3 mx-auto">
+         <v-col>
+         <v-card href="./first.html">
+          <v-img src="https://miro.medium.com/max/600/1*6usmgEPJW7HZ-P0miNEhkQ.jpeg"></v-img>
+             <v-card-title primary-title>
+                 Cards
+             </v-card-title>
+         </v-card>
+         </v-col>
+         <v-col>
+            <v-card color="primary">
+                <v-card-title primary-title>
+                    title
+                </v-card-title>
+            </v-card>
+            </v-col>
+     </v-row>   
+    </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="../js/main.js">
+  
+  </script>
+</body>
+</html>
