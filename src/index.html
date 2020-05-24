@@ -9,7 +9,7 @@
 <body>
   <div id="app">
     <v-app>  
-      <v-img height="300" src="https://miro.medium.com/max/2000/1*2igfKN_sKkfipSNz6S4uXQ.jpeg">
+      <v-img height="500" src="https://miro.medium.com/max/2000/1*2igfKN_sKkfipSNz6S4uXQ.jpeg">
           <img />
       </v-img>
       <v-content>
@@ -23,22 +23,30 @@
                 <v-icon :size="iconSize">mdi-language-css3</v-icon>
               </v-col>
           </v-col>
+          <v-col class="justify-center">
+            <div class="headline font-width-bold">Link</div>
+              <v-col class="d-flex flex-wrap">
+                <a href="https://github.com/TheBeautyofLife/gridsystem" target="_blank" style="text-decoration: none;"><v-icon>mdi-link</v-icon></a>
+                github repo
+              </v-col>
+          </v-col>
+          
         <v-row class="pa-3 mx-auto">
          <v-col>
-         <v-card href="./first.html">
+         <v-card flat href="./first.html">
           <v-img src="https://miro.medium.com/max/600/1*6usmgEPJW7HZ-P0miNEhkQ.jpeg"></v-img>
              <v-card-title primary-title>
                  Cards
              </v-card-title>
          </v-card>
          </v-col>
-         <v-col>
+         <!-- <v-col>
             <v-card color="primary">
                 <v-card-title primary-title>
                     title
                 </v-card-title>
             </v-card>
-            </v-col>
+            </v-col> -->
      </v-row>   
     </v-container>
       </v-content>

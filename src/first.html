@@ -43,11 +43,11 @@
                 <!-- How the first style can be used -->
 
                 <v-container grid-list-md class="pl-10 pr-10 pb-10 mt-5">
-                    <div class="title font-weight-medium">First example 1</div>
+                    <div class="title font-weight-medium">First example</div>
                     <v-row no-gutters>
                         <!-- using the row with CSS helpers-->
                         <v-col class="d-flex row justify-center">
-                                <v-card v-for="user in users" :key='id' flat width="200" class="ml-6 mr-6 mt-4 mb-4">
+                                <v-card v-for="user in users" :key='key' flat width="200" class="ml-6 mr-6 mt-4 mb-4">
                                     <v-img class="white--text align-center imageStyle" height="200px"
                                         :src="user.img">
                                     </v-img>
@@ -61,26 +61,47 @@
                                 </v-card>
                         </v-col>
                     </v-row>
-                </v-container>
-
-
-                <v-container grid-list-md class="pl-10 pr-10 pb-10 mt-5">
-                    <div class="title font-weight-medium">First example 1</div>
                     <v-row no-gutters>
                         <!-- using the row with CSS helpers-->
                         <v-col class="d-flex row justify-center">
-                                <v-card v-for="user in users" :key='id' flat width="200" class="ml-6 mr-6 mt-4 mb-4">
-                                    <v-img class="white--text align-center imageStyle" height="200px"
-                                        :src="user.img">
-                                    </v-img>
+                                <v-card v-for="feature in features" :key='key' flat width="140" class="ml-6 mr-6 mt-4 mb-4">
+                                    <v-icon size="140">{{ feature.icon }}</v-icon>
                                     <v-content class="d-inline-flex row text-center align-center">
                                         <v-card-title primary-title class="justify-center">
-                                            <span>{{ user.name }}</span>
-                                            <span class="body-1"> {{ user.job }} </span>
+                                            <span>{{ feature.name }}</span>
+                                            <span class="body-1"> {{ feature.info }} </span>
                                         </v-card-title>
                                     </v-content>
                                    
                                 </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+
+
+                <v-container grid-list-md class="pl-10 pr-10 pb-10 mt-5">
+                    <div class="title font-weight-medium">Second example</div>
+                    <v-row no-gutters></v-row>
+                        <!-- using the row with CSS helpers-->
+                        <v-col class="d-flex row justify-center">
+                            <v-hover v-slot:default="{ hover }" v-for="product in products" :key='key'>
+                                <v-card :elevation="hover ? 3 : 0"
+                                :class="{ 'on-hover': hover }" width="200" class="ma-4">
+                                    <v-img class="white--text align-center" height="180px"
+                                        :src="product.img">
+                                    </v-img>
+                                        <v-card-text>
+                                            <span class="d-flex text-truncate font-weight-medium">{{ product.name }}</span>
+                                            <span class="body-1 title font-weight-bold"> {{ product.price }} </span>
+                                        </v-card-text>
+                                        <v-card-actions  >
+                                            <v-btn target="_blank" icon :class="{ 'show-btns': hover }"
+                                            color="transparent" block> 
+                                                <div :class="{ 'show-btns': hover }"> Shop now</div>
+                                            </v-btn>
+                                        </v-card-actions>
+                                </v-card>
+                            </v-hover>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -100,6 +121,9 @@
     .imageStyle {
         border-radius: 100px !important;
     }
+    .show-btns {
+  color: rgb(0, 0, 0) !important;
+}
 </style>
 
 </html>
