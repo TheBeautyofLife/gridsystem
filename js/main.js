@@ -25,12 +25,10 @@ new Vue({
         {
             icon:'mdi-home',
             name: 'Stay Home',
-            info: ' UI/UX designer'
         },
         {
           icon:'mdi-dog',
-          name: 'No Taking Photos',
-          info: ' UI/UX designer'
+          name: 'Play with animals',
       }
       ],
       products: [

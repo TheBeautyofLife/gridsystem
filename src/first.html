@@ -65,11 +65,10 @@
                         <!-- using the row with CSS helpers-->
                         <v-col class="d-flex row justify-center">
                                 <v-card v-for="feature in features" :key='key' flat width="140" class="ml-6 mr-6 mt-4 mb-4">
-                                    <v-icon size="140">{{ feature.icon }}</v-icon>
+                                    <v-icon size="120">{{ feature.icon }}</v-icon>
                                     <v-content class="d-inline-flex row text-center align-center">
                                         <v-card-title primary-title class="justify-center">
                                             <span>{{ feature.name }}</span>
-                                            <span class="body-1"> {{ feature.info }} </span>
                                         </v-card-title>
                                     </v-content>
                                    
